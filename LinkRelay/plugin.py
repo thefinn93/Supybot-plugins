@@ -226,7 +226,7 @@ class LinkRelay(callbacks.Plugin):
         if self.registryValue('hostmasks', msg.args[0]):
             args['nick'] = msg.prefix
         s = '%(color)s' + _('--> %(nick)s has joined %(channel)s%(network)s')
-        self.sendToOthers(irc, msg.args[0], s, args)
+        #self.sendToOthers(irc, msg.args[0], s, args)
 
     def doPart(self, irc, msg):
         self.addIRC(irc)
@@ -236,7 +236,7 @@ class LinkRelay(callbacks.Plugin):
         if self.registryValue('hostmasks', msg.args[0]):
             args['nick'] = msg.prefix
         s = '%(color)s' + _('<-- %(nick)s has left %(channel)s%(network)s')
-        self.sendToOthers(irc, msg.args[0], s, args)
+        #self.sendToOthers(irc, msg.args[0], s, args)
 
     def doKick(self, irc, msg):
         self.addIRC(irc)
