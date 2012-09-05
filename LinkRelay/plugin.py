@@ -267,8 +267,8 @@ class LinkRelay(callbacks.Plugin):
         if self.registryValue('color', msg.args[0]):
             args['color'] = '\x03%s' % self.registryValue('colors.quit', msg.args[0])
         s = _('<-- %(nick)s has quit on %(network)s (%(message)s)')
-        self.sendToOthers(irc, None, s, args, msg.nick)
-        self.addIRC(irc)
+        #self.sendToOthers(irc, None, s, args, msg.nick)
+        #self.addIRC(irc)
 
     def sendToOthers(self, irc, channel, s, args, nick=None, isPrivmsg=False):
         assert channel is not None or nick is not None
